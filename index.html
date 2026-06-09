@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Skateboarder 🐱🛹</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <!-- MAIN MENU -->
+    <div id="menu" class="overlay">
+      <h1>🐱 Cloud Skateboarder 🛹</h1>
+      <p class="tagline">One cool grey cat. One skateboard. Endless cat treats.</p>
+      <div class="wallet">🐟 Cat Treats: <span id="menu-treats">0</span></div>
+      <div class="hearts-row" id="menu-hearts"></div>
+      <button id="btn-play" class="big">▶ Play</button>
+      <button id="btn-shop-buy">❤️ Upgrade HP: +1 Heart (30 🐟)</button>
+      <p id="shop-msg" class="shop-msg"></p>
+      <div class="howto">
+        <b>How to play:</b> ← → / A D to skate, Space / ↑ / W to ollie, P to pause.<br>
+        🛹 Hit <b>ramps</b> at speed for a boost! 🐶 Avoid dogs (or stomp them!),
+        💧 puddles and water sprayers. Reach the food bowl to finish a level and earn
+        <b>10 cat treats</b>. Grab cat food cans for bonus treats!
+      </div>
+    </div>
+
+    <!-- LEVEL SELECT -->
+    <div id="levels" class="overlay hidden">
+      <h2>Choose a Level</h2>
+      <div id="level-grid"></div>
+      <button id="btn-levels-back">← Back</button>
+    </div>
+
+    <!-- LEVEL COMPLETE -->
+    <div id="complete" class="overlay hidden">
+      <h2>😎 Level Complete!</h2>
+      <p id="complete-msg"></p>
+      <div class="wallet">🐟 Cat Treats: <span id="complete-treats">0</span></div>
+      <button id="btn-next" class="big">Next Level ▶</button>
+      <button id="btn-complete-menu">Menu</button>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="gameover" class="overlay hidden">
+      <h2>😿 Out of Hearts!</h2>
+      <p>The dogs and water got the best of you this time...</p>
+      <button id="btn-retry" class="big">↻ Try Again</button>
+      <button id="btn-gameover-menu">Menu</button>
+    </div>
+
+    <!-- PAUSE -->
+    <div id="pause" class="overlay hidden">
+      <h2>⏸ Paused</h2>
+      <button id="btn-resume" class="big">Resume</button>
+      <button id="btn-pause-menu">Quit to Menu</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
